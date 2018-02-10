@@ -47,6 +47,7 @@ public class MyAdapter extends ArrayAdapter<String> {
     @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder mViewHolder = new ViewHolder();
         if(converView == null) {
             //the first state the convert view is null, so if the layout view we want ot inflate isnt inflated then inflate
 
@@ -57,13 +58,20 @@ public class MyAdapter extends ArrayAdapter<String> {
             //error one of the things to make your list view scoll easily is make a view holder
             convertView = mInflater.inflate(R.layout.listview_item, parent, false);
             //we need to access the views inside the layout, were using the convert view because this image view is in the layout we just inflated
-            ImageView mFlag = (ImageView) convertView.findViewById(R.id.imageView);
-            TextView mName = (TextView) convertView.findViewById(R.id.textView);
-            //start to set the value of the image view and the text view
-            mFlag.setImageResource(flags[position]);
-            mName.setText(names[position]);
+            mViewHolder.mFlag = (ImageView) convertView.findViewById(R.id.imageView);
+            mViewHolder.mName = (TextView) convertView.findViewById(R.id.textView);
+            //once we set this we wont have to call view by id ever time we need to inflate the layout
+            convertView.setTag(mViewHolder);
         }
+        //start to set the value of the image view and the text view
+        mViewHolder.mFlag.setImageResource(flags[position]);
+        mViewHolder.mName.setText(names[position]);
+
         return super.getView(position, convertView, parent);
     }
 
+    static class ViewHolder{
+        ImageView mFlag;
+        TextView mName;
+    }
 }
