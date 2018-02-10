@@ -5,3 +5,7 @@ https://www.youtube.com/watch?v=q2XA0Pe2W04&t=150s&list=PLHy7B0Rk5zXKZ9gW1zB_Q8e
 
 In this tutorial you will learn how to create Android custom listview with image and text.
 The list will show the country and country flags, and you can click on any item to move to another screen/page.
+
+When i set the viewAdapter it wont run, no errors just says app keeps closing
+
+stopped video at 33:43
