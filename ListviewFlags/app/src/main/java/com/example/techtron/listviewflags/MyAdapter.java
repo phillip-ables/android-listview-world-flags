@@ -24,15 +24,13 @@ public class MyAdapter extends ArrayAdapter<String> {
     int [] population;
     Context mContext;
     //initialize them inside the constructor
-    public MyAdapter(@NonNull Context context, String[] stateNames, int[] stateFlags, String[] stateCapitols, int[] statePopulations) {
+    public MyAdapter(@NonNull Context context, String[] stateNames, int[] stateFlags) {
         //for the super method inside the constructor we will change source to the layout we jsut created
         super(context, R.layout.listview_item);
         //next we need to define the a value to hold our strings and we can pass it through the constructor and set it immediatly in the listview here
 
         this.names = stateNames;
         this.flags = stateFlags;
-        this.capitols = stateCapitols;
-        this.population = statePopulations;
         this.mContext = context;
 
         //we have the adapter, we set the layout and we initialized its values to instances here
