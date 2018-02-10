@@ -68,6 +68,6 @@ public class MainActivity extends AppCompatActivity {
         //next we need to create an adapter
         //adapter is the one who holds the items
         MyAdapter myAdapter = new MyAdapter(MainActivity.this, stateNames, stateFlags, stateCapitals, statePopulations);
-        
+        mListView.setAdapter(myAdapter);
     }
 }
