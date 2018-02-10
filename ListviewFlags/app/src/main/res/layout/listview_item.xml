@@ -1,16 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--before we add anything to it we need to change the orientation from vertical to horizontal-->
-<!--items position horizontal in a line-->
+<?xml version="1.0" encoding="utf-8"?><!--before we add anything to it we need to change the orientation from vertical to horizontal--><!--items position horizontal in a line-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
 
+    <!--Remove layout_weight-->
+    <!--close to TextView, we will give it padding-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:padding="5dp"
         app:srcCompat="@mipmap/ic_launcher" />
+
+    <!--We dont need layout weight-->
+    <!--add textApperance to AppCompat.Title-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
 </LinearLayout>
