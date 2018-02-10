@@ -11,15 +11,19 @@
     tools:context="com.example.techtron.listviewflags.MainActivity">
 
     <!--remove "Hello World" TextView-->
+    <!--add:popupTheme we want the app name to be white and dark themeOverlay-->
+    <!--blank toolbar thats blue -> popupTheme Light, nochange -> app:theme=@style Dark from actionBarTheme no changes-->
+    <!--I'm under the belief that i have no string value set to the Toolbar-->
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <!--remove margin and loyout_alignParentStart&Left-->
     <ListView
