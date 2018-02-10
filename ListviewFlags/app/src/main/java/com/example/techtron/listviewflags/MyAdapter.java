@@ -48,7 +48,7 @@ public class MyAdapter extends ArrayAdapter<String> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         ViewHolder mViewHolder = new ViewHolder();
-        if(converView == null) {
+        if(convertView == null) {
             //the first state the convert view is null, so if the layout view we want ot inflate isnt inflated then inflate
 
             //position reference that we use to access the value for the view, this view represents the specific row of the list, the viewgroup is the parent we have right here
