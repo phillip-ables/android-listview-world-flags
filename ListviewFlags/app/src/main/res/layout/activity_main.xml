@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--im leaving this as ConstraintLayout but everyone always has RelativeLayout-->
-<!--add padding-->
-<!--remove extra padding-->
+<?xml version="1.0" encoding="utf-8"?><!--im leaving this as ConstraintLayout but everyone always has RelativeLayout--><!--add padding--><!--remove extra padding-->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,18 +15,18 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="@style/ThemeOverlay.AppCompat.Dark"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <!--remove margin and loyout_alignParentStart&Left-->
     <ListView
+        android:id="@+id/listview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar"
-        android:id="@+id/listview" />
+        android:layout_below="@+id/toolbar" />
 
 </android.support.constraint.ConstraintLayout>
